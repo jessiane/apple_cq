@@ -53,15 +53,16 @@ $(document).ready(function () {
 
 
     function startPrint() {
-        $("#printer-warp").print({
-            addGlobalStyles: true,
-            stylesheet: null,
-            rejectWindow: true,
-            noPrintSelector: ".no-print",
-            iframe: true,
-            append: null,
-            prepend: null
-        });
+        $("#myPrinter").jqprint();
+        // $("#printer-warp").print({
+        //     addGlobalStyles: true,
+        //     stylesheet: null,
+        //     rejectWindow: true,
+        //     noPrintSelector: ".no-print",
+        //     iframe: true,
+        //     append: null,
+        //     prepend: null
+        // });
     }
 
     function setData(data) {
