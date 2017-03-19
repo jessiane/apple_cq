@@ -1,7 +1,7 @@
 @extends('voyager::master')
 
 @section('css')
-    <link href="/css/printer.css" rel="stylesheet">
+    <link href="/css/printer.css?v=1.0" rel="stylesheet">
     <link href="//cdn.bootcss.com/bootstrap-datepicker/1.7.0-RC1/css/bootstrap-datepicker3.standalone.min.css"
           rel="stylesheet">
 @stop
@@ -210,5 +210,5 @@
 @section('javascript')
     <script src="//cdn.bootcss.com/bootstrap-datepicker/1.7.0-RC1/js/bootstrap-datepicker.min.js"></script>
     <script src="http://cdn.bootcss.com/jQuery.print/1.5.1/jQuery.print.min.js"></script>
-    <script src="/js/printer.js"></script>
+    <script src="/js/printer.js?v=1.0"></script>
 @stop
