@@ -3,14 +3,15 @@
 }
 
 .pre-view, #printer-warp {
-    height: 127mm;
-    width: 186mm;
+    /*height: 127mm;*/
+    /*width: 186mm;*/
     position: relative;
     background: lightblue;
+    margin-left: -15mm;
+    margin-top: -1mm;
 }
 
 .pre-view p {
-    /*height: 1cm;*/
     /*line-height: 1cm;*/
 }
 
@@ -26,93 +27,93 @@
 }
 
 #p-2-1 {
-    left: 33mm;
-    top:25mm;
+    left: 35mm;
+    top:22mm;
 }
 
 #p-2-2 {
-    left: 72mm;
-    top:25mm;
+    left: 73mm;
+    top:22mm;
 }
 
 #p-2-3 {
-    left: 110mm;
-    top:25mm;
+    left: 112mm;
+    top:22mm;
 }
 
 #p-2-4 {
-    left: 146mm;
-    top:25mm;
+    left: 147mm;
+    top:22mm;
 }
 
 #p-3-1 {
-    left: 42mm;
-    top:30mm;
+    left: 45mm;
+    top:29mm;
 }
 
 #p-3-2 {
-    left: 86mm;
-    top:30mm;
+    left: 90mm;
+    top:29mm;
 }
 
 #p-3-3{
-    left: 132mm;
-    top:30mm;
+    left: 140mm;
+    top:29mm;
 }
 
 #p-4-1{
-    left:42mm;
-    top:35mm;
+    left:45mm;
+    top:34mm;
 }
 #p-4-2{
-    left:86mm;
-    top:35mm;
+    left:90mm;
+    top:34mm;
 }
 #p-4-3{
-    left:132mm;
-    top:35mm;
+    left:140mm;
+    top:34mm;
 }
 #p-5-1{
-    left: 42mm;;
+    left: 45mm;;
     top:40mm;
 }
 
 #p-6-1 {
-    left: 82mm;
+    left: 84mm;
     top:48mm;
     /*visibility: hidden;*/
 }
 
 #p-6-2 {
-    left: 118mm;
+    left: 120mm;
     top:48mm;
     /*visibility: hidden;*/
 }
 #p-7-1{
-    left:42mm;
-    top:53mm;
+    left:45mm;
+    top:52mm;
 }
 #p-8-1{
-    left:42mm;
+    left:45mm;
     top:59mm;
 }
 #p-9-1{
-    left:42mm;
-    top:63mm;
+    left:45mm;
+    top:67mm;
 }
 
 
 #p-9-2 {
-    left: 86mm;
-    top:63mm;
+    left: 90mm;
+    top:67mm;
 }
 
 #p-9-3 {
-    left: 132mm;
-    top:63mm;
+    left: 140mm;
+    top:67mm;
 }
 
 #p-10-1 {
-    left: 42mm;
-    top:72mm;
+    left: 45mm;
+    top:76mm;
 }
