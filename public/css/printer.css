@@ -3,6 +3,7 @@
 }
 
 .pre-view, #printer-warp {
+    height: 127mm;
     width: 186mm;
     position: relative;
     background: lightblue;

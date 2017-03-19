@@ -11,6 +11,19 @@
 @stop
 
 @section('content')
+    <div class="pre-view" id="printer-warp">
+        <p><span id="p-1-1">No.1703180010</span></p>
+        <p><span id="p-2-1">秦先生</span><span id="p-2-2">15881881925</span><span
+                    id="p-2-3">2017-03-18</span><span id="p-2-4">No.001</span></p>
+        <p><span id="p-3-1">iphone6s</span><span id="p-3-2">白色</span><span id="p-3-3">NIS732</span></p>
+        <p><span id="p-4-1">正常</span><span id="p-4-2">手机壳</span><span id="p-4-3">123456</span></p>
+        <p><span id="p-5-1">故障现象故障现象故障现象</span></p>
+        <p><span id="p-6-1">√</span><span id="p-6-2">√</span></p>
+        <p><span id="p-7-1">其他说明其他说明其他说明</span></p>
+        <p><span id="p-8-1">维修措施维修措施维修措施</span></p>
+        <p><span id="p-9-1">30天</span><span id="p-9-2">120+50</span><span id="p-9-3">No.001</span></p>
+        <p><span id="p-10-1">2017-01-05</span></p>
+    </div>
     <div class="page-content container-fluid">
         @include('voyager::alerts')
         <div class="row">
@@ -179,7 +192,7 @@
                                     <div class="form-group">
                                         <label class="control-label" for="name">取机日期</label>
                                         <input type="text" class="form-control" placeholder="" name="retrieve_time"
-                                               id="retrieve_time">
+                                               id="retrieve_time" value="{{date('Y-m-d')}}">
                                     </div>
                                 </li>
                             </ul>
@@ -188,19 +201,6 @@
                             <button type="button" class="btn btn-primary" id="submit">提交</button>
                         </div>
                     </form>
-                </div>
-                <div class="pre-view" id="printer-warp">
-                    <p><span id="p-1-1">No.1703180010</span></p>
-                    <p><span id="p-2-1">秦先生</span><span id="p-2-2">15881881925</span><span
-                                id="p-2-3">2017-03-18</span><span id="p-2-4">No.001</span></p>
-                    <p><span id="p-3-1">iphone6s</span><span id="p-3-2">白色</span><span id="p-3-3">NIS732</span></p>
-                    <p><span id="p-4-1">正常</span><span id="p-4-2">手机壳</span><span id="p-4-3">123456</span></p>
-                    <p><span id="p-5-1">故障现象故障现象故障现象</span></p>
-                    <p><span id="p-6-1">√</span><span id="p-6-2">√</span></p>
-                    <p><span id="p-7-1">其他说明其他说明其他说明</span></p>
-                    <p><span id="p-8-1">维修措施维修措施维修措施</span></p>
-                    <p><span id="p-9-1">30天</span><span id="p-9-2">120+50</span><span id="p-9-3">No.001</span></p>
-                    <p><span id="p-10-1">2017-01-05</span></p>
                 </div>
             </div>
         </div>
