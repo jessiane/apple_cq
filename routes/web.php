@@ -27,20 +27,33 @@ Route::group(['prefix' => 'admin'], function () {
     'prefix' => 'printer',
   ], function ()  {
     $namespacePrefix = 'Admin\\';
-    Route::get('/', ['uses' => $namespacePrefix.'PrinterController@showForm', 'as' => 'form']);
+    Route::get('/', ['uses' => $namespacePrefix.'PrinterController@form', 'as' => 'form']);
     Route::post('/save', ['uses' => $namespacePrefix.'PrinterController@save', 'as' => 'save']);
   });
 
 
-  // printer Routes
+  // color Routes
   Route::group([
     'as'     => 'color.',
     'prefix' => 'color',
   ], function ()  {
     $namespacePrefix = 'Admin\\';
     Route::get('/', ['uses' => $namespacePrefix.'ColorController@form', 'as' => 'form']);
-    Route::post('/save', ['uses' => $namespacePrefix.'ColorController@save', 'as' => 'save']);
+    Route::get('/delete/{id}', ['uses' => $namespacePrefix.'ColorController@delete', 'as' => 'delete']);
+    Route::get('/save', ['uses' => $namespacePrefix.'ColorController@save', 'as' => 'save']);
   });
+
+    // orders Routes
+    Route::group([
+        'as'     => 'order.',
+        'prefix' => 'order',
+    ], function ()  {
+        $namespacePrefix = 'Admin\\';
+        Route::get('/', ['uses' => $namespacePrefix.'OrderController@index', 'as' => 'index']);
+        Route::get('/delete/{id}', ['uses' => $namespacePrefix.'OrderController@delete', 'as' => 'delete']);
+        Route::get('/search', ['uses' => $namespacePrefix.'OrderController@search', 'as' => 'search']);
+    });
+
 
 });
 

@@ -1,0 +1,117 @@
+.panel {
+    margin: auto;
+}
+
+.pre-view, #printer-warp {
+    width: 186mm;
+    position: relative;
+    background: lightblue;
+}
+
+.pre-view p {
+    /*height: 1cm;*/
+    /*line-height: 1cm;*/
+}
+
+.pre-view span {
+    display: inline-block;
+    position: absolute;
+}
+
+
+#p-1-1 {
+    left: 146mm;
+    top:12mm;
+}
+
+#p-2-1 {
+    left: 33mm;
+    top:25mm;
+}
+
+#p-2-2 {
+    left: 72mm;
+    top:25mm;
+}
+
+#p-2-3 {
+    left: 110mm;
+    top:25mm;
+}
+
+#p-2-4 {
+    left: 146mm;
+    top:25mm;
+}
+
+#p-3-1 {
+    left: 42mm;
+    top:30mm;
+}
+
+#p-3-2 {
+    left: 86mm;
+    top:30mm;
+}
+
+#p-3-3{
+    left: 132mm;
+    top:30mm;
+}
+
+#p-4-1{
+    left:42mm;
+    top:35mm;
+}
+#p-4-2{
+    left:86mm;
+    top:35mm;
+}
+#p-4-3{
+    left:132mm;
+    top:35mm;
+}
+#p-5-1{
+    left: 42mm;;
+    top:40mm;
+}
+
+#p-6-1 {
+    left: 82mm;
+    top:48mm;
+    /*visibility: hidden;*/
+}
+
+#p-6-2 {
+    left: 118mm;
+    top:48mm;
+    /*visibility: hidden;*/
+}
+#p-7-1{
+    left:42mm;
+    top:53mm;
+}
+#p-8-1{
+    left:42mm;
+    top:59mm;
+}
+#p-9-1{
+    left:42mm;
+    top:63mm;
+}
+
+
+#p-9-2 {
+    left: 86mm;
+    top:63mm;
+}
+
+#p-9-3 {
+    left: 132mm;
+    top:63mm;
+}
+
+#p-10-1 {
+    left: 42mm;
+    top:72mm;
+}

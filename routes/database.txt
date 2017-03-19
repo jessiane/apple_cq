@@ -1,25 +1,25 @@
 create table v_orders(
 id int auto_increment primary key ,
-order_number_prefix varbinary(10) not null,
-order_number int not null,
-name varbinary(32) not null,
+order_number_prefix varchar(10) not null,
+order_number varchar(32) not null,
+name varchar(32) not null,
 sex boolean not null,
-tel varbinary(24) not null,
-service_user VARBINARY(10) not null,
-model_name varbinary(24)  not null,
-color varbinary(12) not null,
-IMEI varbinary(24) not null,
-surface varbinary(32) default '',
-attachment varbinary(32) default '',
-password varbinary(32) default '',
-symptom varbinary(255) default '',
+tel varchar(24) not null,
+service_user varchar(10) not null,
+model_name varchar(24)  not null,
+color varchar(12) not null,
+IMEI varchar(24) not null,
+surface varchar(32) default '',
+attachment varchar(32) default '',
+password varchar(32) default '',
+symptom varchar(255) default '',
 guarantee_type int default 0,
-statement varbinary(255) default '',
-repair_plan varbinary(255) default '',
-guarantee_time varbinary(32) default '',
-spend varbinary(32) default '',
-sign varbinary(12) default '',
-retrieve_time varbinary(14) default '',
+statement varchar(255) default '',
+repair_plan varchar(255) default '',
+guarantee_time varchar(32) default '',
+spend varchar(32) default '',
+sign varchar(12) default '',
+retrieve_time varchar(14) default '',
 is_delete boolean default 0,
 is_repaired boolean default 1,
 created_at datetime,
@@ -28,12 +28,12 @@ updated_at datetime
 
 create table v_model_names(
   id int auto_increment primary key ,
-  name varbinary(32) not null
+  name varchar(32) not null
 )
 
 
 create table v_colors(
   id int auto_increment primary key ,
-  name varbinary(32) not null,
-  color varbinary(32) not null
+  name varchar(32) not null,
+  color varchar(32) not null
 )
