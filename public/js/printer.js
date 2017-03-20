@@ -17,8 +17,24 @@ $(document).ready(function () {
             url: '/admin/printer/save',
             data: formData,
             success: function (data) {
-                $('#p-6-' + data.guarantee_type).show();
-                // setData(data);
+                var p61 = $('#p-6-1');
+                var p62 = $('#p-6-2');
+                p61.show();
+                p62.show();
+                switch (data.guarantee_type) {
+                    case '1':
+                        p62.hide();
+                        break;
+                    case "2":
+                        p61.hide();
+                        break;
+                    default:
+                        p61.hide();
+                        p62.hide();
+                        break;
+                }
+
+                setData(data);
                 startPrint();
             }
         });
@@ -65,8 +81,9 @@ $(document).ready(function () {
     }
 
     function setData(data) {
+        var sex = data.sex == 1 ? '先生' : '女士';
         $('#p-1-1').html(data.order_number);
-        $('#p-2-1').html(data.name + data.sex == 1 ? '先生' : '女士');
+        $('#p-2-1').html(data.name + sex);
         $('#p-2-2').html(data.tel);
         $('#p-2-3').html(getFormatDate());
         $('#p-2-4').html(data.service_user);
@@ -98,5 +115,4 @@ $(document).ready(function () {
             return number;
         }
     }
-
 });

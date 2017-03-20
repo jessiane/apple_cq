@@ -1,7 +1,7 @@
 @extends('voyager::master')
 
 @section('css')
-    <link href="/css/printer.css?v=1.0" rel="stylesheet">
+    <link href="/css/printer.css?version=1.1" rel="stylesheet">
     <link href="//cdn.bootcss.com/bootstrap-datepicker/1.7.0-RC1/css/bootstrap-datepicker3.standalone.min.css"
           rel="stylesheet">
 @stop
@@ -62,8 +62,13 @@
                                     <div class="form-group">
                                         <label>受理人</label>
                                         <select class="form-control" name="service_user">
-                                            @foreach(config('set.service_user') as $serviceUser)
-                                                <option value="{{$serviceUser}}">{{$serviceUser}}</option>
+                                            @foreach(config('set.service_user') as $key=>$serviceUser)
+                                                @if($key == 0 )
+                                                    <option value="{{$serviceUser}}" selected>{{$serviceUser}}</option>
+                                                @else
+                                                    <option value="{{$serviceUser}}">{{$serviceUser}}</option>
+                                                @endif
+
                                             @endforeach
                                         </select>
                                     </div>
@@ -74,6 +79,7 @@
                                         <input type="text" class="form-control" id="input-model-name" name="model_name"
                                                placeholder="">
                                         <select class="form-control" id="selector-model-name">
+                                            <option value="未选择">未选择</option>
                                             @foreach($categories as $category)
                                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                             @endforeach
@@ -84,6 +90,7 @@
                                         <input type="text" class="form-control" name="color" placeholder=""
                                                id="input-color">
                                         <select class="form-control" id="selector-color">
+                                            <option value="未选择">未选择</option>
                                             @foreach($colors as $color)
                                                 <option value="{{$color->id}}">{{$color->name}}</option>
                                             @endforeach
@@ -100,6 +107,7 @@
                                         <input type="text" class="form-control" name="surface" placeholder=""
                                                id="input-surface">
                                         <select class="form-control" id="selector-surface">
+                                            <option value="未选择">未选择</option>
                                             @foreach(config('set.surface') as $surface)
                                                 <option value="{{$surface}}">{{$surface}}</option>
                                             @endforeach
@@ -110,6 +118,7 @@
                                         <input type="text" class="form-control" name="attachment" placeholder=""
                                                id="input-attachment">
                                         <select class="form-control" id="selector-attachment">
+                                            <option value="无" selected>无</option>
                                             @foreach(config('set.attachment') as $attachment)
                                                 <option value="{{$attachment}}">{{$attachment}}</option>
                                             @endforeach
@@ -157,6 +166,7 @@
                                         <input type="text" class="form-control" placeholder="" name="guarantee_time"
                                                id="input-guarantee-time">
                                         <select class="form-control" id="selector-guarantee-time">
+                                            <option value="未选择">未选择</option>
                                             @foreach(config('set.guarantee_time') as $guarantee_time)
                                                 <option value="{{$guarantee_time}}">{{$guarantee_time}}</option>
                                             @endforeach
@@ -169,8 +179,12 @@
                                     <div class="form-group">
                                         <label class="control-label">工程师签字</label>
                                         <select class="form-control" name="sign">
-                                            @foreach(config('set.service_user') as $serviceUser)
-                                                <option value="{{$serviceUser}}">{{$serviceUser}}</option>
+                                            @foreach(config('set.service_user') as $key=>$serviceUser)
+                                                @if($key == 0 )
+                                                    <option value="{{$serviceUser}}" selected>{{$serviceUser}}</option>
+                                                @else
+                                                    <option value="{{$serviceUser}}">{{$serviceUser}}</option>
+                                                @endif
                                             @endforeach
                                         </select>
                                     </div>
@@ -192,17 +206,17 @@
             </div>
         </div>
         <div class="pre-view" id="printer-warp">
-            <p><span id="p-1-1">No.1703180010</span></p>
-            <p><span id="p-2-1">秦先生</span><span id="p-2-2">15881881925</span><span
-                        id="p-2-3">2017-03-18</span><span id="p-2-4">No.001</span></p>
-            <p><span id="p-3-1">iphone6s</span><span id="p-3-2">白色</span><span id="p-3-3">NIS732</span></p>
-            <p><span id="p-4-1">正常</span><span id="p-4-2">手机壳</span><span id="p-4-3">123456</span></p>
-            <p><span id="p-5-1">故障现象故障现象故障现象</span></p>
+            <p><span id="p-1-1"></span></p>
+            <p><span id="p-2-1"></span><span id="p-2-2"></span><span
+                        id="p-2-3"></span><span id="p-2-4"></span></p>
+            <p><span id="p-3-1"></span><span id="p-3-2"></span><span id="p-3-3"></span></p>
+            <p><span id="p-4-1"></span><span id="p-4-2"></span><span id="p-4-3"></span></p>
+            <p><span id="p-5-1"></span></p>
             <p><span id="p-6-1">√</span><span id="p-6-2">√</span></p>
-            <p><span id="p-7-1">其他说明其他说明其他说明</span></p>
-            <p><span id="p-8-1">维修措施维修措施维修措施</span></p>
-            <p><span id="p-9-1">30天</span><span id="p-9-2">120+50</span><span id="p-9-3">No.001</span></p>
-            <p><span id="p-10-1">2017-01-05</span></p>
+            <p><span id="p-7-1"></span></p>
+            <p><span id="p-8-1"></span></p>
+            <p><span id="p-9-1"></span><span id="p-9-2"></span><span id="p-9-3"></span></p>
+            <p><span id="p-10-1"></span></p>
         </div>
     </div>
 @stop
@@ -210,5 +224,5 @@
 @section('javascript')
     <script src="//cdn.bootcss.com/bootstrap-datepicker/1.7.0-RC1/js/bootstrap-datepicker.min.js"></script>
     <script src="http://cdn.bootcss.com/jQuery.print/1.5.1/jQuery.print.min.js"></script>
-    <script src="/js/printer.js?v=1.0"></script>
+    <script src="/js/printer.js?version=1.1"></script>
 @stop
